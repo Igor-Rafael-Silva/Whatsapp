@@ -1,0 +1,232 @@
+/* --- ESTRUTURA GERAL DA INTERFACE --- */
+body {
+    background-color: #d1d7db;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+/* --- PAINEL ESQUERDO (SIDEBAR) --- */
+.sidebar {
+    width: 30%;
+    min-width: 300px;
+    border-right: 1px solid #e9edef;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.sidebar-header {
+    height: 60px;
+    background-color: #f0f2f5;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 1px solid #d1d7db;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-name {
+    font-weight: 500;
+    color: #111b21;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #00a884;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.avatar-contact {
+    background-color: #667781;
+}
+
+.btn-logout {
+    background: transparent;
+    border: none;
+    color: #54656f;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.btn-logout:hover {
+    color: #f44336;
+}
+
+.search-box {
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9edef;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f0f2f5;
+    outline: none;
+    font-size: 14px;
+}
+
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f2f5;
+    transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+    background-color: #f5f6f6;
+}
+
+.chat-details {
+    margin-left: 12px;
+    flex: 1;
+}
+
+.chat-title {
+    font-weight: 500;
+    color: #111b21;
+    font-size: 16px;
+}
+
+.chat-subtitle {
+    font-size: 13px;
+    color: #667781;
+    margin-top: 2px;
+}
+
+/* --- PAINEL DIREITO (ÁREA DO CHAT) --- */
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #efeae2;
+    background-image: radial-gradient(#d1d7db 1px, transparent 0);
+    background-size: 16px 16px;
+}
+
+.chat-header {
+    height: 60px;
+    background-color: #f0f2f5;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e9edef;
+}
+
+.header-details {
+    margin-left: 12px;
+}
+
+.messages-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.empty-chat {
+    margin: auto;
+    text-align: center;
+    color: #667781;
+}
+
+.empty-logo {
+    width: 60px;
+    opacity: 0.5;
+}
+
+.empty-chat h3 {
+    margin-top: 15px;
+    font-weight: 400;
+    color: #41525d;
+}
+
+.chat-input-area {
+    height: 60px;
+    background-color: #f0f2f5;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.btn-send {
+    background-color: #00a884;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-send:hover {
+    background-color: #008f6f;
+}
+/* --- BALÕES DE CONVERSA --- */
+.balao-mensagem {
+    max-width: 65%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-break: break-word;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.minha-mensagem {
+    align-self: flex-end;
+    background-color: #d9fdd3;
+    color: #111b21;
+}
+
+.mensagem-recebida {
+    align-self: flex-start;
+    background-color: #ffffff;
+    color: #111b21;
+}

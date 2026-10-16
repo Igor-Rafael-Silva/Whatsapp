@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <title>Criar Conta - Uatizap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <img class="img" src="public/img/phone-call.png" alt="Icone de chamada">
+        </div>
+
+        <h2 id="titulo-passo" style="text-align: center; margin-bottom: 24px;">Criar Nova Conta</h2>
+
+        <!-- CAMPO 1: Apelido -->
+        <div class="label-custom">
+            <label for="apelido">Apelido</label>
+        </div>
+        <div class="group-input-custom">
+            <input class="input-custom" type="text" id="apelido" placeholder="Digite seu apelido" required>
+        </div>
+
+        <!-- CAMPO 2: Telefone -->
+        <div class="label-custom">
+            <label for="tel">Telefone</label>
+        </div>
+        <div class="group-input-custom">
+            <input class="input-custom" type="tel" id="tel" placeholder="11999999999" required>
+        </div>
+
+        <!-- CAMPO 3: Senha -->
+        <div class="label-custom">
+            <label for="senha">Senha</label>
+        </div>
+        <div class="group-input-custom">
+            <input class="input-custom" type="password" id="senha" placeholder="Digite sua senha" required>
+        </div>
+
+        <!-- BOTÃO REGISTRAR -->
+        <div class="group-btn-custom" style="margin-top: 10px;">
+            <button id="btnRegistrar" class="btn-custom">Criar Conta</button>
+        </div>
+
+        <!-- LINK PARA VOLTAR AO LOGIN -->
+        <div class="group" style="margin-top: 15px; text-align: center;">
+            <a href="index.html">Já tem uma conta? Entrar</a>
+        </div>
+
+    </div>
+
+    <script src="js/registro.js"></script>
+</body>
+
+</html>

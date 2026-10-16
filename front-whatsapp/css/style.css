@@ -1,0 +1,268 @@
+/* --- RESET E ESTILOS BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #f0f2f5;
+    color: #111b21;
+}
+
+/* --- CONTENTOR PRINCIPAL --- */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Cartão que envolve o formulário */
+.container > div:not(.group-input-custom):not(.group-radio-custom):not(.group-btn-custom):not(.group):not(.label-custom) {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 24px;
+    object-fit: contain;
+}
+
+#titulo-passo {
+    font-size: 22px;
+    font-weight: 500;
+    color: #111b21;
+    margin-bottom: 20px;
+}
+
+/* --- RÓTULOS E PASSOS --- */
+.label-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #667781;
+}
+
+.label-custom label {
+    font-weight: 500;
+}
+
+/* --- GRUPO DE INPUT E DDI --- */
+.group-input-custom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    height: 52px;
+    background-color: #ffffff;
+    border: 1px solid #e9edef;
+    border-radius: 10px;
+    padding: 0 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(11, 20, 26, 0.08);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.group-input-custom:focus-within {
+    border-color: #00a884;
+    box-shadow: 0 0 0 2px rgba(0, 168, 132, 0.2);
+}
+
+.input-custom {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #111b21;
+    padding-left: 8px;
+}
+
+.input-custom::placeholder {
+    color: #8696a0;
+}
+
+/* --- OPÇÃO CONTINUAR CONECTADO --- */
+.group-radio-custom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 380px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #3b4a54;
+    cursor: pointer;
+}
+
+.group-radio-custom input[type="radio"],
+.group-radio-custom input[type="checkbox"] {
+    accent-color: #00a884;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* --- BOTÃO PRINCIPAL --- */
+.group-btn-custom {
+    width: 100%;
+    max-width: 380px;
+    margin-bottom: 16px;
+}
+
+.btn-custom {
+    width: 100%;
+    height: 48px;
+    color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    background-color: #00a884;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 168, 132, 0.3);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-custom:hover {
+    background-color: #008f6f;
+}
+
+.btn-custom:active {
+    transform: scale(0.98);
+}
+
+/* --- LINKS DE AJUDA E CRIAR CONTA --- */
+.group {
+    margin: 6px 0;
+    text-align: center;
+}
+
+.group a {
+    text-decoration: none;
+    color: #00a884;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.group a:hover {
+    color: #008f6f;
+    text-decoration: underline;
+}
+
+/* --- SELECT CUSTOMIZADO DDI --- */
+.select-wrapper {
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-wrapper input[type="radio"] {
+    display: none;
+}
+
+.select-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 10px;
+    border-right: 1px solid #e9edef;
+}
+
+.selected-option {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #111b21;
+}
+
+.selected-option img,
+.option img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* Regras CSS :has() */
+.select-wrapper:has(#br:checked) .br-selected {
+    display: flex;
+}
+
+.select-wrapper:has(#us:checked) .us-selected {
+    display: flex;
+}
+
+/* Seta (Chevron) */
+.chevron {
+    border: solid #8696a0;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+    margin-left: 2px;
+}
+
+.select-wrapper:focus-within .chevron {
+    transform: rotate(-135deg);
+}
+
+/* Dropdown Menu */
+.select-options {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: -12px;
+    width: 140px;
+    background: #ffffff;
+    border: 1px solid #e9edef;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(11, 20, 26, 0.12);
+    display: none;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.select-wrapper:focus-within .select-options {
+    display: block;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #111b21;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option:hover {
+    background-color: #f5f6f6;
+}
+
+.select-wrapper:has(#br:checked) .br-option,
+.select-wrapper:has(#us:checked) .us-option {
+    background-color: #e7fce3;
+    font-weight: bold;
+}

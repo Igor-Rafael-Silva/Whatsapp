@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uatizap - Web</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interface.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- PAINEL ESQUERDO: BARRA LATERAL -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <div class="user-avatar" id="avatarUtilizador">U</div>
+                    <span id="nomeUtilizador" class="user-name">Utilizador</span>
+                </div>
+                <button class="btn-logout" id="btnSair">Sair</button>
+            </div>
+
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Pesquisar ou começar uma nova conversa">
+            </div>
+
+            <!-- Lista Dinâmica de Conversas/Contactos -->
+            <div class="chat-list" id="listaContactos">
+                <!-- Os utilizadores registados vão aparecer aqui dinamicamente -->
+            </div>
+        </div>
+
+        <!-- PAINEL DIREITO: ÁREA DE CONVERSA -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="user-avatar avatar-contact" id="avatarContactoAtivo">?</div>
+                <div class="header-details">
+                    <div class="chat-title" id="nomeContactoAtivo">Selecione uma conversa</div>
+                    <div class="chat-subtitle" id="statusContactoAtivo">offline</div>
+                </div>
+            </div>
+
+            <div class="messages-container" id="containerMensagens">
+                <div class="empty-chat">
+                    <img src="public/img/phone-call.png" alt="Logo Uatizap" class="empty-logo">
+                    <h3>Uatizap Web</h3>
+                    <p>Selecione um contacto à esquerda para iniciar uma conversa.</p>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" id="inputMensagem" placeholder="Escreva uma mensagem...">
+                <button class="btn-send" id="btnEnviar">Enviar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BIBLIOTECAS E SCRIPT CONECTADO -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>
